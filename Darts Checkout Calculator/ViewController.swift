@@ -18,27 +18,33 @@ struct checkOut {
 	var thirdMultiplier: String = "D"
 	var thirdDart: Int!
 
-	init(pointsRemaining: Int, firstMultiplier: String, firstDart: Int, secondMultiplier: String, secondDart: Int, thirdMultiplier: String, thirdDart: Int) {
+	init(pointsRemaining: Int) {
 		self.pointsRemaining = pointsRemaining
-		self.firstMultiplier = firstMultiplier
-		self.firstDart = firstDart
-		self.secondMultiplier = secondMultiplier
-		self.secondDart = secondDart
-		self.thirdMultiplier = thirdMultiplier
-		self.thirdDart = thirdDart
 	}
 }
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-	var gesture = UIGestureRecognizer()
+	var possibleCheckouts: [Int] = []
+	var firstDartT20Array: [Int] = []
+	var secondDartT20Array: [Int] = []
+	var thirdDartD20Array: [Int] = []
+
 	var picker = UIPickerView()
 	var firstComponent: [Int] = [Int]()
 	var secondComponent: [Int] = [Int]()
 	var thirdComponent: [Int] = [Int]()
 	var currentScore: Int = 0
 
-	@IBOutlet weak var PageControl: UIPageControl!
+	var firstMultiplier = "T"
+	var secondMultiplier = "T"
+	var thirdMultiplier = "D"
+	var first: Int = 20
+	var second: Int = 20
+	var third: Int = 25
+
+	var pickerData: [(Int, Int, Int)]!
+
 	@IBOutlet weak var CurrentScore_Input: UITextField!
 	@IBOutlet weak var FirstDart_Output: UILabel!
 	@IBOutlet weak var SecondDart_Output: UILabel!
@@ -49,15 +55,61 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		gesture.delegate = self
 		picker.delegate = self
 		picker.dataSource = self
 
-		setupPickerView()
-
+		setupArrays()
+		//setupPickerView()
 		setupCheckOuts()
 		setupPickerData()
 		
+	}
+
+	func setupArrays() {
+		setupPossibleCheckouts()
+
+
+
+		
+		var currentDart = checkOut(pointsRemaining: num)
+		currentDart.firstMultiplier = "T"
+		currentDart.firstDart = 20
+
+
+
+		firstDartT20Array = [170, 167, 164, 161, 160, 158, 157, 156, 155, 154, 153, 152, 151, 150, 149, 148, 147, 146, 145, 144, 143, 142, 141, 140, 138, 137, 136, 134, 133, 131, 130, 127, 124, 121, 120, 118, 117, 116, 114, 112, 111, 110, 108, 106, 105, 102, 100, 98, 96, 92, 84, 80, 76, 68]
+
+		for checkout in possibleCheckouts {
+
+			if firstDartT20Array.contains(checkout) {
+				firstMultiplier = "T"
+				first = 20
+			} else if secondDartT20Array.contains(checkout) {
+				secondMultiplier = "T"
+				second = 20
+			}
+		}
+
+
+		secondDartT20Array = [136, 140, 144, 152, 156, 158, 160, 170]
+
+	}
+
+	func setupPossibleCheckouts() {
+		possibleCheckouts.append(contentsOf: 40...158)
+		possibleCheckouts.append(160)
+		possibleCheckouts.append(161)
+		possibleCheckouts.append(164)
+		possibleCheckouts.append(167)
+		possibleCheckouts.append(170)
+	}
+
+	func setupCheckOuts() {
+
+	}
+
+	func setupPickerView() {
+
 	}
 
 	@objc func donePicker() {
@@ -109,8 +161,5 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 		} else {
 			return String(thirdComponent[row])
 		}
-	}
-
-	@IBAction func SwipeGestureRecognizer(_ sender: Any) {
 	}
 }

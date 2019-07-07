@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D7A8FE122C49A9B00B56EF7 /* SetupFunctions_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7A8FE022C49A9B00B56EF7 /* SetupFunctions_Ext.swift */; };
+		4DB73F1422D14C85009C1FE1 /* SetupFunctions_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB73F1322D14C85009C1FE1 /* SetupFunctions_Ext.swift */; };
 		4DD18D3122C1923E0019D911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D3022C1923E0019D911 /* AppDelegate.swift */; };
 		4DD18D3322C1923E0019D911 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D3222C1923E0019D911 /* ViewController.swift */; };
 		4DD18D3622C1923E0019D911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD18D3422C1923E0019D911 /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D7A8FE022C49A9B00B56EF7 /* SetupFunctions_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupFunctions_Ext.swift; sourceTree = "<group>"; };
+		4DB73F1322D14C85009C1FE1 /* SetupFunctions_Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFunctions_Ext.swift; sourceTree = "<group>"; };
 		4DD18D2D22C1923E0019D911 /* Darts Checkout Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Darts Checkout Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD18D3022C1923E0019D911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DD18D3222C1923E0019D911 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 				4DD18D3722C192410019D911 /* Assets.xcassets */,
 				4DD18D3922C192410019D911 /* LaunchScreen.storyboard */,
 				4DD18D3C22C192410019D911 /* Info.plist */,
-				4D7A8FE022C49A9B00B56EF7 /* SetupFunctions_Ext.swift */,
+				4DB73F1322D14C85009C1FE1 /* SetupFunctions_Ext.swift */,
 			);
 			path = "Darts Checkout Calculator";
 			sourceTree = "<group>";
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D7A8FE122C49A9B00B56EF7 /* SetupFunctions_Ext.swift in Sources */,
+				4DB73F1422D14C85009C1FE1 /* SetupFunctions_Ext.swift in Sources */,
 				4DD18D3322C1923E0019D911 /* ViewController.swift in Sources */,
 				4DD18D3122C1923E0019D911 /* AppDelegate.swift in Sources */,
 			);
