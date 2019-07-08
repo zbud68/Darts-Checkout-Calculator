@@ -289,9 +289,6 @@
                                 <exclude reference="k0z-oR-670"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="ta9-ja-Sgg" appends="YES" id="fm7-tR-lki"/>
-                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -307,7 +304,6 @@
                 <swipeGestureRecognizer direction="right" id="ta9-ja-Sgg">
                     <connections>
                         <action selector="SwipeGestureRecognizer:" destination="BYZ-38-t0r" id="1P2-Fh-gyo"/>
-                        <outlet property="delegate" destination="8bC-Xf-vdC" id="vgO-Nw-HIj"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
