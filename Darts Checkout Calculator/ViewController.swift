@@ -133,9 +133,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 		let firstPosition = (firstComponent[pickerView.selectedRow(inComponent: 0)] * 100)
 		let secondPosition = (secondComponent[pickerView.selectedRow(inComponent: 1)] * 10)
 		let thirdPosition = (thirdComponent[pickerView.selectedRow(inComponent: 2)])
-
 		currentScore = firstPosition + secondPosition + thirdPosition
-
 		CurrentScore_Input.text = String(currentScore)
 
 		for checkOut in checkOuts where checkOut.pointsRemaining == currentScore {
