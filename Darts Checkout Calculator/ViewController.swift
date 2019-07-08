@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SpriteKit
 
 struct checkOut {
 	var pointsRemaining: Int!
