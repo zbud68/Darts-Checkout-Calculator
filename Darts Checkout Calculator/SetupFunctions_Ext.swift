@@ -14,7 +14,7 @@ extension ViewController {
 		for num in 0...1 {
 			firstComponent.append(num)
 		}
-		for num in 0...9 {
+		for num in 0...7 {
 			secondComponent.append(num)
 		}
 		for num in 0...9 {

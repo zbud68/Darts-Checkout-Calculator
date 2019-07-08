@@ -56,10 +56,29 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 		setupPickerData()
 		setupCheckOuts()
 
+		let toolBar = UIToolbar()
+		toolBar.barStyle = UIBarStyle.default
+		toolBar.isTranslucent = true
+		toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+		toolBar.sizeToFit()
+
+		let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: Selector(("donePicker")))
+		let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+
+		toolBar.setItems([spaceButton, doneButton], animated: false)
+		toolBar.isUserInteractionEnabled = true
+
 		picker.delegate = self
 		picker.dataSource = self
 
+		picker.selectRow(1, inComponent: 0, animated: false)
+		picker.selectRow(7, inComponent: 1, animated: false)
+		thirdComponent.removeAll()
+		thirdComponent.append(0)
+		picker.selectRow(0, inComponent: 2, animated: false)
+
 		CurrentScore_Input.inputView = picker
+		CurrentScore_Input.inputAccessoryView = toolBar
 	}
 
 	@objc func donePicker() {

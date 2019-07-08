@@ -119,7 +119,7 @@
                                 </attributedString>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <textField opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="301" clearsOnBeginEditing="YES" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Vvk-On-hA1" userLabel="CurrentScore_Input">
+                            <textField opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="170" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Vvk-On-hA1" userLabel="CurrentScore_Input">
                                 <rect key="frame" x="167" y="207" width="80" height="30"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,7 +128,7 @@
                                     <constraint firstAttribute="height" constant="30" id="ede-2h-qfA"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="301">
+                                    <fragment content="170">
                                         <attributes>
                                             <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="24" name="MarkerFelt-Thin"/>
@@ -164,7 +164,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="pTX-YI-eYp"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="D20">
+                                    <fragment content="D25">
                                         <attributes>
                                             <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="24" name="MarkerFelt-Thin"/>
