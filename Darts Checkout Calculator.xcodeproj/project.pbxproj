@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D68B2BC22D2F34500033869 /* DartBoard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D68B2BB22D2F34500033869 /* DartBoard.sks */; };
-		4D68B2BF22D2F43100033869 /* SpriteKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68B2BE22D2F43100033869 /* SpriteKitViewController.swift */; };
+		4D68B2C222D3F13600033869 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D68B2C122D3F13600033869 /* SpriteKit.framework */; };
 		4DB73F1422D14C85009C1FE1 /* SetupFunctions_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB73F1322D14C85009C1FE1 /* SetupFunctions_Ext.swift */; };
 		4DD18D3122C1923E0019D911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D3022C1923E0019D911 /* AppDelegate.swift */; };
 		4DD18D3322C1923E0019D911 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD18D3222C1923E0019D911 /* ViewController.swift */; };
@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		4D68B2BB22D2F34500033869 /* DartBoard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DartBoard.sks; sourceTree = "<group>"; };
-		4D68B2BE22D2F43100033869 /* SpriteKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitViewController.swift; sourceTree = "<group>"; };
+		4D68B2C122D3F13600033869 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		4DB73F1322D14C85009C1FE1 /* SetupFunctions_Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFunctions_Ext.swift; sourceTree = "<group>"; };
 		4DD18D2D22C1923E0019D911 /* Darts Checkout Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Darts Checkout Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD18D3022C1923E0019D911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D68B2C222D3F13600033869 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,11 +50,20 @@
 			path = "SKS Files";
 			sourceTree = "<group>";
 		};
+		4D68B2C022D3F13600033869 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D68B2C122D3F13600033869 /* SpriteKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4DD18D2422C1923E0019D911 = {
 			isa = PBXGroup;
 			children = (
 				4DD18D2F22C1923E0019D911 /* Darts Checkout Calculator */,
 				4DD18D2E22C1923E0019D911 /* Products */,
+				4D68B2C022D3F13600033869 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,7 +85,6 @@
 				4DD18D3922C192410019D911 /* LaunchScreen.storyboard */,
 				4DD18D3C22C192410019D911 /* Info.plist */,
 				4DB73F1322D14C85009C1FE1 /* SetupFunctions_Ext.swift */,
-				4D68B2BE22D2F43100033869 /* SpriteKitViewController.swift */,
 				4D68B2BD22D2F37C00033869 /* SKS Files */,
 			);
 			path = "Darts Checkout Calculator";
@@ -155,7 +164,6 @@
 			files = (
 				4DB73F1422D14C85009C1FE1 /* SetupFunctions_Ext.swift in Sources */,
 				4DD18D3322C1923E0019D911 /* ViewController.swift in Sources */,
-				4D68B2BF22D2F43100033869 /* SpriteKitViewController.swift in Sources */,
 				4DD18D3122C1923E0019D911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

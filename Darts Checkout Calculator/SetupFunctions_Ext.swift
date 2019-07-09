@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SpriteKit
 
 extension ViewController {
 	func setupPickerData() {
@@ -920,5 +921,81 @@ extension ViewController {
 			currentCheckOut.thirdDart = third
 			checkOuts.append(currentCheckOut)
 		}
+	}
+
+	func setupGameScene() {
+		if let Single20 = dartBoard.childNode(withName: "Single20") {
+			single20 = Single20 as? SKSpriteNode
+		} else {
+			print("Single20 not found")
+		}
+
+		if let Double20 = dartBoard.childNode(withName: "Double20") {
+			double20 = Double20 as? SKSpriteNode
+		} else {
+			print("Double20 not found")
+		}
+
+		if let Triple20 = dartBoard.childNode(withName: "Triple20") {
+			triple20 = Triple20 as? SKSpriteNode
+		} else {
+			print("Triple20 not found")
+		}
+
+		if let Single19 = dartBoard.childNode(withName: "Single19") {
+			single19 = Single19 as? SKSpriteNode
+		} else {
+			print("Single19 not found")
+		}
+
+		if let Double19 = dartBoard.childNode(withName: "Double19") {
+			double19 = Double19 as? SKSpriteNode
+		} else {
+			print("Double19 not found")
+		}
+
+		if let Triple19 = dartBoard.childNode(withName: "Triple19") {
+			triple19 = Triple19 as? SKSpriteNode
+		} else {
+			print("Triple not found")
+		}
+
+		if let Single18 = dartBoard.childNode(withName: "Single18") {
+			single18 = Single18 as? SKSpriteNode
+		} else {
+			print("Single18 not found")
+		}
+
+		if let Double18 = dartBoard.childNode(withName: "Double18") {
+			double18 = Double18 as? SKSpriteNode
+		} else {
+			print("Double18 not found")
+		}
+
+		if let Triple18 = dartBoard.childNode(withName: "Triple18") {
+			triple18 = Triple18 as? SKSpriteNode
+		} else {
+			print("Triple18 not found")
+		}
+
+		if let Single17 = dartBoard.childNode(withName: "Single17") {
+			single17 = Single17 as? SKSpriteNode
+		} else {
+			print("Single17 not found")
+		}
+
+		if let Double17 = dartBoard.childNode(withName: "Double17") {
+			double17 = Double17 as? SKSpriteNode
+		} else {
+			print("Double17 not found")
+		}
+
+		if let Triple17 = dartBoard.childNode(withName: "Triple17") {
+			triple17 = Triple17 as? SKSpriteNode
+		} else {
+			print("Triple17 not found")
+		}
+
+
 	}
 }
