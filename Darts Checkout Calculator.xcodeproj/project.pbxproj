@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4F0D4C22D6C7CD00352A82 /* SingleLocations.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D4F0D4B22D6C7CD00352A82 /* SingleLocations.sks */; };
 		4D68B2BC22D2F34500033869 /* DartBoard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D68B2BB22D2F34500033869 /* DartBoard.sks */; };
 		4D68B2C222D3F13600033869 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D68B2C122D3F13600033869 /* SpriteKit.framework */; };
 		4DB73F1422D14C85009C1FE1 /* SetupFunctions_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB73F1322D14C85009C1FE1 /* SetupFunctions_Ext.swift */; };
@@ -15,9 +16,12 @@
 		4DD18D3622C1923E0019D911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD18D3422C1923E0019D911 /* Main.storyboard */; };
 		4DD18D3822C192410019D911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DD18D3722C192410019D911 /* Assets.xcassets */; };
 		4DD18D3B22C192410019D911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD18D3922C192410019D911 /* LaunchScreen.storyboard */; };
+		4DDA913322D72D4A0064BAD3 /* DoubleLocations.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4DDA913222D72D4A0064BAD3 /* DoubleLocations.sks */; };
+		4DDA913522D72D610064BAD3 /* TripleLocations.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4DDA913422D72D610064BAD3 /* TripleLocations.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D4F0D4B22D6C7CD00352A82 /* SingleLocations.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SingleLocations.sks; sourceTree = "<group>"; };
 		4D68B2BB22D2F34500033869 /* DartBoard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DartBoard.sks; sourceTree = "<group>"; };
 		4D68B2C122D3F13600033869 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		4DB73F1322D14C85009C1FE1 /* SetupFunctions_Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFunctions_Ext.swift; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		4DD18D3722C192410019D911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DD18D3A22C192410019D911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DD18D3C22C192410019D911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DDA913222D72D4A0064BAD3 /* DoubleLocations.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DoubleLocations.sks; sourceTree = "<group>"; };
+		4DDA913422D72D610064BAD3 /* TripleLocations.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TripleLocations.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				4D68B2BB22D2F34500033869 /* DartBoard.sks */,
+				4D4F0D4B22D6C7CD00352A82 /* SingleLocations.sks */,
+				4DDA913222D72D4A0064BAD3 /* DoubleLocations.sks */,
+				4DDA913422D72D610064BAD3 /* TripleLocations.sks */,
 			);
 			path = "SKS Files";
 			sourceTree = "<group>";
@@ -148,10 +157,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DDA913522D72D610064BAD3 /* TripleLocations.sks in Resources */,
+				4D4F0D4C22D6C7CD00352A82 /* SingleLocations.sks in Resources */,
 				4DD18D3B22C192410019D911 /* LaunchScreen.storyboard in Resources */,
 				4DD18D3822C192410019D911 /* Assets.xcassets in Resources */,
 				4DD18D3622C1923E0019D911 /* Main.storyboard in Resources */,
 				4D68B2BC22D2F34500033869 /* DartBoard.sks in Resources */,
+				4DDA913322D72D4A0064BAD3 /* DoubleLocations.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,21 +6,26 @@
 //  Copyright © 2019 Mark Davis. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import SpriteKit
 
+struct Dart {
+	var multiplierLabel: String!
+	var pointValue: Int!
+	var boardLocation: SKReferenceNode?
+}
+
 struct checkOut {
 	var pointsRemaining: Int!
-	var firstMultiplier: String!
-	var firstDart: Int!
-	var secondMultiplier: String!
-	var secondDart: Int!
-	var thirdMultiplier: String!
-	var thirdDart: Int!
+	var firstDart: Dart!
+	var secondDart: Dart!
+	var thirdDart: Dart!
 
-	init(pointsRemaining: Int) {
+	init(pointsRemaining: Int, firstDart: Dart, secondDart: Dart, thirdDart: Dart) {
 		self.pointsRemaining = pointsRemaining
+		self.firstDart = firstDart
+		self.secondDart = secondDart
+		self.thirdDart = thirdDart
 	}
 }
 
@@ -28,68 +33,68 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	var backGround: SKSpriteNode!
 	var dartBoard: SKSpriteNode!
 
-	var single20: SKSpriteNode!
-	var single19: SKSpriteNode!
-	var single18: SKSpriteNode!
-	var single17: SKSpriteNode!
-	var single16: SKSpriteNode!
-	var single15: SKSpriteNode!
-	var single14: SKSpriteNode!
-	var single13: SKSpriteNode!
-	var single12: SKSpriteNode!
-	var single11: SKSpriteNode!
-	var single10: SKSpriteNode!
-	var single9: SKSpriteNode!
-	var single8: SKSpriteNode!
-	var single7: SKSpriteNode!
-	var single6: SKSpriteNode!
-	var single5: SKSpriteNode!
-	var single4: SKSpriteNode!
-	var single3: SKSpriteNode!
-	var single2: SKSpriteNode!
-	var single1: SKSpriteNode!
-	var double20: SKSpriteNode!
-	var double19: SKSpriteNode!
-	var double18: SKSpriteNode!
-	var double17: SKSpriteNode!
-	var double16: SKSpriteNode!
-	var double15: SKSpriteNode!
-	var double14: SKSpriteNode!
-	var double13: SKSpriteNode!
-	var double12: SKSpriteNode!
-	var double11: SKSpriteNode!
-	var double10: SKSpriteNode!
-	var double9: SKSpriteNode!
-	var double8: SKSpriteNode!
-	var double7: SKSpriteNode!
-	var double6: SKSpriteNode!
-	var double5: SKSpriteNode!
-	var double4: SKSpriteNode!
-	var double3: SKSpriteNode!
-	var double2: SKSpriteNode!
-	var double1: SKSpriteNode!
-	var triple20: SKSpriteNode!
-	var triple19: SKSpriteNode!
-	var triple18: SKSpriteNode!
-	var triple17: SKSpriteNode!
-	var triple16: SKSpriteNode!
-	var triple15: SKSpriteNode!
-	var triple14: SKSpriteNode!
-	var triple13: SKSpriteNode!
-	var triple12: SKSpriteNode!
-	var triple11: SKSpriteNode!
-	var triple10: SKSpriteNode!
-	var triple9: SKSpriteNode!
-	var triple8: SKSpriteNode!
-	var triple7: SKSpriteNode!
-	var triple6: SKSpriteNode!
-	var triple5: SKSpriteNode!
-	var triple4: SKSpriteNode!
-	var triple3: SKSpriteNode!
-	var triple2: SKSpriteNode!
-	var triple1: SKSpriteNode!
-	var single25: SKSpriteNode!
-	var double25: SKSpriteNode!
+	var single20: SKReferenceNode!
+	var single19: SKReferenceNode!
+	var single18: SKReferenceNode!
+	var single17: SKReferenceNode!
+	var single16: SKReferenceNode!
+	var single15: SKReferenceNode!
+	var single14: SKReferenceNode!
+	var single13: SKReferenceNode!
+	var single12: SKReferenceNode!
+	var single11: SKReferenceNode!
+	var single10: SKReferenceNode!
+	var single9: SKReferenceNode!
+	var single8: SKReferenceNode!
+	var single7: SKReferenceNode!
+	var single6: SKReferenceNode!
+	var single5: SKReferenceNode!
+	var single4: SKReferenceNode!
+	var single3: SKReferenceNode!
+	var single2: SKReferenceNode!
+	var single1: SKReferenceNode!
+	var double20: SKReferenceNode!
+	var double19: SKReferenceNode!
+	var double18: SKReferenceNode!
+	var double17: SKReferenceNode!
+	var double16: SKReferenceNode!
+	var double15: SKReferenceNode!
+	var double14: SKReferenceNode!
+	var double13: SKReferenceNode!
+	var double12: SKReferenceNode!
+	var double11: SKReferenceNode!
+	var double10: SKReferenceNode!
+	var double9: SKReferenceNode!
+	var double8: SKReferenceNode!
+	var double7: SKReferenceNode!
+	var double6: SKReferenceNode!
+	var double5: SKReferenceNode!
+	var double4: SKReferenceNode!
+	var double3: SKReferenceNode!
+	var double2: SKReferenceNode!
+	var double1: SKReferenceNode!
+	var triple20: SKReferenceNode!
+	var triple19: SKReferenceNode!
+	var triple18: SKReferenceNode!
+	var triple17: SKReferenceNode!
+	var triple16: SKReferenceNode!
+	var triple15: SKReferenceNode!
+	var triple14: SKReferenceNode!
+	var triple13: SKReferenceNode!
+	var triple12: SKReferenceNode!
+	var triple11: SKReferenceNode!
+	var triple10: SKReferenceNode!
+	var triple9: SKReferenceNode!
+	var triple8: SKReferenceNode!
+	var triple7: SKReferenceNode!
+	var triple6: SKReferenceNode!
+	var triple5: SKReferenceNode!
+	var triple4: SKReferenceNode!
+	var triple3: SKReferenceNode!
+	var triple2: SKReferenceNode!
+	var triple1: SKReferenceNode!
+	var single25: SKReferenceNode!
+	var double25: SKReferenceNode!
 
 	var possibleCheckouts: [Int] = []
 	var firstDartT20Array: [Int] = []
@@ -116,29 +121,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	@IBOutlet weak var FirstDart_Output: UILabel!
 	@IBOutlet weak var SecondDart_Output: UILabel!
 	@IBOutlet weak var ThirdDart_Output: UILabel!
+	@IBOutlet weak var DartBoardLocation_Output: SKView!
 
 	var gameScene: SKScene!
+
+	var doneButton: SKSpriteNode!
+
+	var dartLocations: [SKReferenceNode] = []
+
+	var touchLocation: CGPoint!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		if let GameScene = SKScene(fileNamed: "DartBoard.sks") {
-			gameScene = GameScene
-		} else {
-			print("gamescene not found")
-		}
-
-		if let BackGround = gameScene.childNode(withName: "BackGround") {
-			backGround = BackGround as? SKSpriteNode
-		} else {
-			print("background not found")
-		}
-
-		if let DartBoard = backGround.childNode(withName: "DartBoard") {
-			dartBoard = DartBoard as? SKSpriteNode
-		} else {
-			print("dartboard not found")
-		}
+		DartBoardLocation_Output.alpha = 0
 
 		setupGameScene()
 		setupPickerData()
@@ -169,8 +165,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 		CurrentScore_Input.inputAccessoryView = toolBar
 	}
 
-	@objc func donePicker() {
-		CurrentScore_Input.resignFirstResponder()
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		if let touch = touches.first {
+			touchLocation = touch.location(in: backGround)
+		}
+
+		if doneButton.contains(touchLocation) {
+			DartBoardLocation_Output.alpha = 0
+			DartBoardLocation_Output.isHidden = true
+		}
 	}
 
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -243,10 +246,32 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 		currentScore = firstPosition + secondPosition + thirdPosition
 		CurrentScore_Input.text = String(currentScore)
 
-		for checkOut in checkOuts where checkOut.pointsRemaining == currentScore {
-			FirstDart_Output.text = "\(checkOut.firstMultiplier!)\(checkOut.firstDart!)"
-			SecondDart_Output.text = "\(checkOut.secondMultiplier!)\(checkOut.secondDart!)"
-			ThirdDart_Output.text = "\(checkOut.thirdMultiplier!)\(checkOut.thirdDart!)"
+		for checkOut in checkOuts {
+			let firstLocation = checkOut.firstDart.boardLocation
+			let secondLocation = checkOut.secondDart.boardLocation
+			let thirdLocation = checkOut.thirdDart.boardLocation
+
+			firstLocation?.alpha = 0
+			secondLocation?.alpha = 0
+			thirdLocation?.alpha = 0
 		}
+
+		for checkOut in checkOuts where checkOut.pointsRemaining == currentScore {
+			checkOut.firstDart.boardLocation?.alpha = 1
+			checkOut.secondDart.boardLocation?.alpha = 1
+			checkOut.thirdDart.boardLocation?.alpha = 1
+			FirstDart_Output.text = "\(checkOut.firstDart.multiplierLabel!)\(checkOut.firstDart.pointValue!)"
+			SecondDart_Output.text = "\(checkOut.secondDart.multiplierLabel!)\(checkOut.secondDart.pointValue!)"
+			ThirdDart_Output.text = "\(checkOut.thirdDart.multiplierLabel!)\(checkOut.thirdDart.pointValue!)"
+		}
+	}
+
+	@IBAction func ShowDartLocationButton(_ sender: UIButton) {
+		DartBoardLocation_Output.alpha = 1
+		DartBoardLocation_Output.backgroundColor = .lightGray
+	}
+
+	@objc func donePicker() {
+		CurrentScore_Input.resignFirstResponder()
 	}
 }
